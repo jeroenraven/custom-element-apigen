@@ -149,7 +149,7 @@ void _generateImportStub(
 Future<FileSummary> _parseFile(String inputPath,
     {bool ignoreFileErrors: false}) async {
   var results = await Process.run(
-      '.\packages\custom_element_apigen\src\js\process_elements.bat', [inputPath]);
+      '.\\packages\\custom_element_apigen\\src\\js\\process_elements.bat', [inputPath]);
   if (results.exitCode != 0 || results.stderr != '') _parseError(results);
 
   var jsonFileSummary;
